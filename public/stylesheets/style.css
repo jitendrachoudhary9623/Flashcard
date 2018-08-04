@@ -1,0 +1,13 @@
+body{
+    background-color: antiquewhite
+}
+
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    padding: 1.5%;
+    width: 100%;
+    background: #cec9c9;
+    font-style: oblique
+}

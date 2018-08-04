@@ -1,12 +1,21 @@
 doctype html
 html(lang="en")
   head
+    link(rel='stylesheet',href='/stylesheets/style.css')
+
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
     title Flash Cards
   body
-    include includes/header.pug
-    if name
-      h2 Welcome, #{name}!
-      form(action='/goodbye', method='post')
-        button(type='submit') Goodbye
-    block content
+    div.jumbotron.text-center
+      include includes/header.pug
+    div.container
+      if name
+
+
+        form(action='/goodbye', method='post')
+          div.row
+            h2(class="col-md-11") Welcome, #{name}!
+            button( type='submit',class=" col-md-1 btn btn-danger") Log out
+      
+      block content
     include includes/footer.pug

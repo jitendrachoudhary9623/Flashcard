@@ -6,7 +6,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cookieParser());
-
+app.use(express.static('public'))  //loads static content
 app.set('view engine', 'pug');
 
 const mainRoutes = require('./routes');

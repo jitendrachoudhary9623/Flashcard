@@ -1,12 +1,21 @@
 extends layout.pug
 
 block content
+  br
   section#content
-    h2=text
-    if hint
-      p
-        i Hint: #{hint}
-    a(href=`${id}?side=${url}`) #{change} <!-- literal synatx of js -->
-    br
-    a(href='/cards') Random Card
-    
+    div.card-deck
+      div.card.bg-light
+        div.card-body
+          h2.card-title=text
+          if hint
+            div.card-text
+              i Hint: #{hint}
+              br
+          div.card-text
+            br
+            br
+            div.row.card-text
+              a(href=`${id}?side=${url}`,class='col-md-6 text-center card-link btn btn-info') #{change}<!-- literal synatx of js -->
+              
+              a(href='/cards',class='col-md-6 text-center btn btn-warning') Random Card
+        
